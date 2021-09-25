@@ -1,4 +1,15 @@
 h1 {
-  background-color: bisque;
-  display: inline;
+  background-color: navy;
+  text-align: center;
+  line-height: 150px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: white;
+  margin-top: 0px;
+}
+
+body {
+  background-image: url("https://katu.com/resources/media/b0a69e94-ed6c-41ed-a9ff-0a05722a3ee3-large16x9_GeorgeFoxSignIMG_85711.jpg?1588025074442");
+  background-size: cover;
+  color: white;
 }
