@@ -1,3 +1,28 @@
 h1 {
   background-color: orange;
 }
+#profile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#flexhold {
+  display: flex;
+  flex-direction: row;
+}
+
+#courses {
+  flex: 0 1 20%;
+}
+#summary {
+  flex: 0 1 60%;
+}
+
+#lang {
+  flex: 0 1 20%;
+}
