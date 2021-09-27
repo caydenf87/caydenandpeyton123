@@ -8,8 +8,136 @@ h1 {
   margin-top: 0px;
 }
 
-body {
+#firstpage {
+  background-color: lightslategray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer {
+  background-color: navy;
+  text-align: center;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+#landingpage {
   background-image: url("https://katu.com/resources/media/b0a69e94-ed6c-41ed-a9ff-0a05722a3ee3-large16x9_GeorgeFoxSignIMG_85711.jpg?1588025074442");
   background-size: cover;
-  color: white;
+}
+#profile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#flexhold {
+  display: flex;
+  flex-direction: row;
+}
+
+#summary {
+  flex: 0 1 20%;
+  text-align: center;
+  margin-top: 25px;
+  background-color: lightsteelblue;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+}
+
+#courses {
+  flex: 0 1 55%;
+  text-align: center;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: large;
+  background-color: lightgray;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+}
+
+#lang {
+  flex: 0 1 20%;
+  text-align: center;
+  margin-top: 25px;
+  background-color: lightyellow;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+}
+
+a {
+  color: lightskyblue;
+  font-size: 20px;
+}
+
+a:hover {
+  color: red;
+}
+
+#flexsplit {
+  display: flex;
+  flex-direction: row;
+}
+
+#logo {
+  flex: 0 1 25%;
+}
+
+#honorsSum {
+  flex: 0 1 65%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgray;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+}
+
+#flexsplittwo {
+  display: flex;
+  flex-direction: row;
+}
+
+#personal {
+  flex: 0 1 70%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgray;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+}
+
+#seminar {
+  flex: 0 1 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#texts {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  border: 5px solid slategray;
+  background-color: lightgray;
+}
+
+#honorspage {
+  background-color: lightsteelblue;
+}
+
+#tableTitle {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
