@@ -24,15 +24,9 @@ footer {
   background-image: url("https://katu.com/resources/media/b0a69e94-ed6c-41ed-a9ff-0a05722a3ee3-large16x9_GeorgeFoxSignIMG_85711.jpg?1588025074442");
   background-size: cover;
 }
+
 #profile {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#flexhold {
-  display: flex;
-  flex-direction: row;
 }
 
 #summary {
@@ -40,20 +34,14 @@ footer {
   text-align: center;
   margin-top: 25px;
   background-color: lightsteelblue;
-  border-radius: 10px;
-  -moz-border-radius: 10px 20px 30px 0;
 }
 
 #courses {
   flex: 0 1 55%;
   text-align: center;
   margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
   font-size: large;
   background-color: lightgray;
-  border-radius: 10px;
-  -moz-border-radius: 10px 20px 30px 0;
 }
 
 #lang {
@@ -61,8 +49,6 @@ footer {
   text-align: center;
   margin-top: 25px;
   background-color: lightyellow;
-  border-radius: 10px;
-  -moz-border-radius: 10px 20px 30px 0;
 }
 
 a {
@@ -74,11 +60,6 @@ a:hover {
   color: red;
 }
 
-#flexsplit {
-  display: flex;
-  flex-direction: row;
-}
-
 #logo {
   flex: 0 1 25%;
 }
@@ -88,18 +69,7 @@ a:hover {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;
   text-align: center;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
   background-color: lightgray;
-  border-radius: 10px;
-  -moz-border-radius: 10px 20px 30px 0;
-}
-
-#flexsplittwo {
-  display: flex;
-  flex-direction: row;
 }
 
 #personal {
@@ -107,25 +77,15 @@ a:hover {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;
   text-align: center;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
   background-color: lightgray;
-  border-radius: 10px;
-  -moz-border-radius: 10px 20px 30px 0;
 }
 
 #seminar {
   flex: 0 1 25%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #texts {
   margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;
   border: 5px solid slategray;
@@ -138,8 +98,6 @@ a:hover {
 
 #tableTitle {
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 #cspage {
@@ -151,47 +109,26 @@ a:hover {
   margin-left: 550px;
   margin-bottom: 25px;
   background-color: steelblue;
-  border-radius: 10px;
-  -moz-border-radius: 10px 20px 30px 0;
-}
-
-#csinfosplit {
-  display: flex;
-  flex-direction: row;
 }
 
 #cstwo {
   flex: 30%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: auto;
   text-align: center;
   margin-right: 50px;
   margin-left: 50px;
   background-color: orange;
-  border-radius: 10px;
-  -moz-border-radius: 10px 20px 30px 0;
 }
 
 #csimg {
   flex: 20%;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 #csthree {
   flex: 30%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: auto;
   text-align: center;
   margin-right: 50px;
   margin-left: 50px;
   background-color: lightgreen;
-  border-radius: 10px;
-  -moz-border-radius: 10px 20px 30px 0;
 }
 
 #csfour {
@@ -200,16 +137,34 @@ a:hover {
   margin-left: 550px;
   margin-top: 25px;
   background-color: yellow;
-  border-radius: 10px;
-  -moz-border-radius: 10px 20px 30px 0;
 }
 
 #cstable {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 50px;
   margin-bottom: 50px;
   border: 5px solid red;
   background-color: lightpink;
+}
+
+.flexdisplay {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftrightauto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.allmarginauto {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.bubble {
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
 }
