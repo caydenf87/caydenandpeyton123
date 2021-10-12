@@ -1,0 +1,150 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+/* basic elements */
+html {
+}
+body {
+  font-family: amongus;
+}
+p {
+}
+h3 {
+}
+a:link {
+  background-color: white;
+}
+a:visited {
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+}
+abbr {
+}
+
+/* specific divs */
+.page-wrapper {
+}
+
+.intro {
+}
+
+h1 {
+  font-family: amongus-title;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+header h2 {
+  font-family: amongus-title;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+header {
+}
+
+.summary {
+}
+.summary p {
+}
+
+.preamble {
+}
+.supporting {
+}
+
+footer {
+  margin-top: -17px;
+  background-color: white;
+}
+footer a:link,
+footer a:visited {
+}
+
+.sidebar {
+}
+.sidebar .wrapper {
+}
+.sidebar h3.select {
+}
+.sidebar h3.archives {
+}
+.sidebar h3.resources {
+}
+
+.sidebar ul {
+}
+.sidebar li {
+}
+.sidebar li a:link {
+}
+
+.extra1 {
+}
+
+@font-face {
+  font-family: amongus;
+  src: url(amongus.ttf);
+}
+
+@font-face {
+  font-family: amongus-title;
+  src: url(AmongUs-Regular.ttf);
+}
+
+h3 {
+  font-family: amongus-title;
+  text-transform: uppercase;
+}
+
+header {
+  line-height: 100px;
+  background-image: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202012/among-us-wallpaper_1200x768.jpeg?i8KMl2.2TeS0rKa4Bc1aSDxef_75cj16&size=1200:675");
+}
+
+#zen-resources {
+}
+
+#zen-supporting {
+  background-image: url("https://i.imgflip.com/4gcf88.png");
+  background-size: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+#zen-explanation {
+  text-align: center;
+  margin-top: 25px;
+  margin-right: 190px;
+  margin-left: 140px;
+}
+
+#zen-participation {
+  text-align: center;
+  margin-top: 65px;
+  margin-right: 150px;
+  margin-left: 180px;
+  line-height: 15px;
+}
+
+#zen-requirements {
+  margin-top: 50px;
+  background-color: white;
+}
+
+#zen-benefits {
+  text-align: center;
+  margin-top: 80px;
+  margin-right: 190px;
+  margin-left: 140px;
+}
