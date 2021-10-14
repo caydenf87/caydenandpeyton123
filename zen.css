@@ -22,14 +22,12 @@ p {
 h3 {
 }
 a:link {
-  background-color: white;
 }
 a:visited {
 }
 a:hover,
 a:focus,
 a:active {
-  text-decoration: underline;
 }
 abbr {
 }
@@ -139,14 +137,27 @@ header {
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
+  margin-top: 50px;
 }
 
 #zen-participation {
+  background-image: url("chattwo.png");
+  background-position: center center;
+  background-size: cover;
+  height: 170px;
+  width: 1080px;
   text-align: center;
-  margin-top: 65px;
-  margin-right: 150px;
-  margin-left: 180px;
+  vertical-align: middle;
+  line-height: normal;
+  display: block;
+  padding-top: 5px;
+  padding-left: 200px;
+  padding-right: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
   line-height: 15px;
+  margin-top: 50px;
 }
 
 #zen-requirements {
@@ -155,10 +166,22 @@ header {
 }
 
 #zen-benefits {
+  background-image: url("chatone.png");
+  background-position: center center;
+  background-size: cover;
+  height: 170px;
+  width: 1080px;
   text-align: center;
-  margin-top: 80px;
-  margin-right: 190px;
-  margin-left: 140px;
+  vertical-align: middle;
+  line-height: normal;
+  display: block;
+  padding-top: 5px;
+  padding-left: 200px;
+  padding-right: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 #zen-preamble {
@@ -166,6 +189,33 @@ header {
   background-size: cover;
 }
 
-/* USE ANIMATION ON VENT */
-/*https://www.w3schools.com/howto/howto_css_image_text.asp
-use this for positioning the text in image */
+/* Hiding text and displaying vent image*/
+#design-selection {
+  text-indent: 1000%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url("http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/b6ea0c8e6895dc2.png");
+  height: 400px; /* be sure to set height & width */
+  width: 600px;
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: transparent;
+}
+
+/* Displaying text when hovering over vent image*/
+#design-selection:hover {
+  color: black;
+  background-image: url("openvent.png");
+  background-size: cover;
+  height: 600px;
+  width: 700px;
+  text-indent: 0%;
+  white-space: normal;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 50px;
+}
