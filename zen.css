@@ -135,6 +135,8 @@ header {
   display: inline-block;
   padding-left: 200px;
   padding-right: 220px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #zen-participation {
