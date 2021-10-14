@@ -107,12 +107,12 @@ footer a:visited {
 
 @font-face {
   font-family: amongus;
-  src: url(amongus.ttf);
+  src: url(Resources/amongus.ttf);
 }
 
 @font-face {
   font-family: amongus-title;
-  src: url(AmongUs-Regular.ttf);
+  src: url(Resources/AmongUs-Regular.ttf);
 }
 
 h3 {
@@ -133,7 +133,7 @@ header {
 }
 
 #zen-explanation {
-  background-image: url("chatone.png");
+  background-image: url("Resources/chatone.png");
   background-position: center center;
   background-size: cover;
   height: 170px;
@@ -152,7 +152,7 @@ header {
 }
 
 #zen-participation {
-  background-image: url("chattwo.png");
+  background-image: url("Resources/chattwo.png");
   background-position: center center;
   background-size: cover;
   height: 170px;
@@ -177,7 +177,7 @@ header {
 }
 
 #zen-benefits {
-  background-image: url("chatone.png");
+  background-image: url("Resources/chatone.png");
   background-position: center center;
   background-size: cover;
   height: 170px;
@@ -241,7 +241,7 @@ header {
 /* Displaying text when hovering over vent image*/
 #design-selection:hover {
   color: black;
-  background-image: url("openvent.png");
+  background-image: url("Resources/openvent.png");
   background-size: cover;
   height: 600px;
   width: 700px;
