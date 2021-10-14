@@ -9,9 +9,13 @@
 
 /* basic elements */
 html {
+  height: 100%;
 }
 body {
+  height: 100%;
   font-family: amongus;
+  background-image: url("https://cdn131.picsart.com/341608237014211.png");
+  background-size: cover;
 }
 p {
 }
@@ -115,18 +119,22 @@ header {
 #zen-resources {
 }
 
+/* Change height/width of entire thing */
 #zen-supporting {
-  background-image: url("https://i.imgflip.com/4gcf88.png");
-  background-size: 100%;
-  position: relative;
-  display: inline-block;
 }
 
 #zen-explanation {
+  background-image: url("chatone.png");
+  background-position: center center;
+  background-size: cover;
+  height: 200px;
+  width: 1080px;
   text-align: center;
-  margin-top: 25px;
-  margin-right: 190px;
-  margin-left: 140px;
+  vertical-align: middle;
+  line-height: normal;
+  display: inline-block;
+  padding-left: 200px;
+  padding-right: 220px;
 }
 
 #zen-participation {
@@ -148,3 +156,12 @@ header {
   margin-right: 190px;
   margin-left: 140px;
 }
+
+#zen-preamble {
+  background-image: url("https://i.redd.it/iuw23pelpy561.png");
+  background-size: cover;
+}
+
+/* USE ANIMATION ON VENT */
+/*https://www.w3schools.com/howto/howto_css_image_text.asp
+use this for positioning the text in image */
