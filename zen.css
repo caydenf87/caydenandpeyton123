@@ -22,9 +22,10 @@ p {
 h3 {
 }
 a:link {
-  color: navy;
+  color: lightskyblue;
 }
 a:visited {
+  color: red;
 }
 a:hover::before,
 a:focus::before,
@@ -221,10 +222,13 @@ header {
   vertical-align: middle;
   color: black;
   text-align: center;
+  font-size: large;
 }
 
 /* Hiding text and displaying vent image*/
 #design-selection {
+  float: left;
+  margin-top: 50px;
   text-indent: 1000%;
   white-space: nowrap;
   overflow: hidden;
@@ -233,7 +237,7 @@ header {
   width: 600px;
   background-size: cover;
   display: block;
-  margin-left: auto;
+  margin-left: 100px;
   margin-right: auto;
   color: transparent;
 }
@@ -255,5 +259,52 @@ header {
 }
 
 #zen-summary {
-  background-color: white;
+  background-image: url("https://cdn.vox-cdn.com/thumbor/mCze0k6_0Bv5YMVQHk80zXi2ciI=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22136080/ss_a0f2416e11bf5b47788eaa3617e092b73962b145.jpg");
+  width: 700px;
+  height: 525px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  color: white;
+  align-items: flex-end;
+  font-size: large;
+  margin-bottom: 75px;
+  margin-top: 50px;
+  text-align: center;
+  text-indent: 10px;
+}
+
+#design-archives {
+  margin-top: 50px;
+  padding-top: 23px;
+  height: 509px;
+  width: 453px;
+  margin-left: 900px;
+  margin-right: auto;
+  padding-left: 65px;
+  line-height: 14px;
+  color: white;
+  background-size: cover;
+  display: block;
+  background-image: url("https://steamlists.com/wp-content/uploads/2020/11/21_Among-Us-HOW-TO-MASTER-ALL-OF-THE-TASKS-ON-THE-SKELD-steamlists-com.png");
+}
+
+#zen-resources {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-size: cover;
+  color: white;
+  height: 540px;
+  width: 960px;
+  background-image: url("https://airentertainment.biz/wp-content/uploads/2020/08/Among-Us-17_08_2020-20_02_24.png");
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resources {
+  padding-bottom: 60px;
 }
