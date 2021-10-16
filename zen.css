@@ -173,8 +173,21 @@ header {
 }
 
 #zen-requirements {
+  background-image: url("https://c.tenor.com/IIRztzf3eLoAAAAd/among-us-upload.gif");
+  background-size: cover;
+  height: 700px;
+  width: 1200px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
   margin-top: 50px;
-  background-color: white;
+  color: black;
+  font-size: large;
+  padding-top: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 #zen-benefits {
@@ -307,4 +320,23 @@ header {
 
 .resources {
   padding-bottom: 60px;
+}
+
+.select {
+  padding-bottom: 60px;
+}
+
+footer {
+  padding-top: 130px;
+  font-size: 50px;
+  display: flex;
+  text-indent: 20px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  background-size: cover;
+  background-image: url("Resources/med_bay.jpg");
+  width: 1000px;
+  height: 450px;
 }
