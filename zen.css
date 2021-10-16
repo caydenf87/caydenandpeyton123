@@ -240,7 +240,6 @@ header {
 
 /* Hiding text and displaying vent image*/
 #design-selection {
-  float: left;
   margin-top: 50px;
   text-indent: 1000%;
   white-space: nowrap;
@@ -250,7 +249,7 @@ header {
   width: 600px;
   background-size: cover;
   display: block;
-  margin-left: 100px;
+  margin-left: auto;
   margin-right: auto;
   color: transparent;
 }
@@ -293,7 +292,7 @@ header {
   padding-top: 23px;
   height: 509px;
   width: 453px;
-  margin-left: 900px;
+  margin-left: auto;
   margin-right: auto;
   padding-left: 65px;
   line-height: 14px;
