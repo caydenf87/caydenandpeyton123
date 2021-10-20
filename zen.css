@@ -1,13 +1,3 @@
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-
-/* basic elements */
 html {
   height: 100%;
 }
@@ -17,10 +7,7 @@ body {
   background-image: url("https://cdn131.picsart.com/341608237014211.png");
   background-size: cover;
 }
-p {
-}
-h3 {
-}
+
 a:link {
   color: lightskyblue;
 }
@@ -41,15 +28,6 @@ a:active::before {
   background-image: url("https://media4.giphy.com/media/XMgq4wclEITQjivNeV/giphy.gif");
   color: red;
 }
-abbr {
-}
-
-/* specific divs */
-.page-wrapper {
-}
-
-.intro {
-}
 
 h1 {
   font-family: amongus-title;
@@ -64,46 +42,10 @@ header h2 {
   color: white;
   text-align: center;
 }
-header {
-}
-
-.summary {
-}
-.summary p {
-}
-
-.preamble {
-}
-.supporting {
-}
 
 footer {
   margin-top: -17px;
   background-color: white;
-}
-footer a:link,
-footer a:visited {
-}
-
-.sidebar {
-}
-.sidebar .wrapper {
-}
-.sidebar h3.select {
-}
-.sidebar h3.archives {
-}
-.sidebar h3.resources {
-}
-
-.sidebar ul {
-}
-.sidebar li {
-}
-.sidebar li a:link {
-}
-
-.extra1 {
 }
 
 @font-face {
@@ -124,13 +66,6 @@ h3 {
 header {
   line-height: 100px;
   background-image: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202012/among-us-wallpaper_1200x768.jpeg?i8KMl2.2TeS0rKa4Bc1aSDxef_75cj16&size=1200:675");
-}
-
-#zen-resources {
-}
-
-/* Change height/width of entire thing */
-#zen-supporting {
 }
 
 #zen-explanation {
@@ -209,12 +144,13 @@ header {
   margin-top: 50px;
 }
 
+/* Hiding text and displaying image*/
 #zen-preamble {
   text-indent: 1000%;
   white-space: nowrap;
   overflow: hidden;
   background-image: url("https://d1lss44hh2trtw.cloudfront.net/assets/editorial/2020/09/emergency-meeting-red-button-among-us.jpg");
-  height: 375px; /* be sure to set height & width */
+  height: 375px;
   width: 667px;
   background-size: cover;
   display: block;
@@ -222,6 +158,8 @@ header {
   margin-right: auto;
   color: transparent;
 }
+
+/* Displaying new image and text on hover */
 #zen-preamble:hover {
   background-image: url("https://i.redd.it/iuw23pelpy561.png");
   height: 300px;
@@ -245,7 +183,7 @@ header {
   white-space: nowrap;
   overflow: hidden;
   background-image: url("http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/b6ea0c8e6895dc2.png");
-  height: 400px; /* be sure to set height & width */
+  height: 400px;
   width: 600px;
   background-size: cover;
   display: block;
