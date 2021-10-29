@@ -1,0 +1,149 @@
+body {
+  height: 100%;
+  background-image: url("https://cdn131.picsart.com/341608237014211.png");
+  background-size: cover;
+}
+
+#startButton {
+  margin-top: 200px;
+  display: block;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  width: 300px;
+  font-size: 50px;
+  font-family: amongus-title;
+  text-transform: uppercase;
+  transition-duration: 0.4s;
+  background-color: white;
+}
+
+#startButton:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+#pick {
+  font-size: 50px;
+  font-family: amongus-title;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* USE GRID */
+#characterOne {
+  background-image: url("Resources/characterOne.png");
+  height: 277px;
+  width: 237px;
+  background-size: cover;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#characterOne:hover {
+  cursor: pointer;
+  border-width: medium;
+  border-color: greenyellow;
+}
+
+#characterTwo {
+  background-image: url("Resources/characterTwo.png");
+  height: 277px;
+  width: 237px;
+  background-size: cover;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#characterTwo:hover {
+  cursor: pointer;
+  border-width: medium;
+  border-color: greenyellow;
+}
+
+#characterThree {
+  background-image: url("Resources/characterThree.png");
+  height: 277px;
+  width: 237px;
+  background-size: cover;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#characterThree:hover {
+  cursor: pointer;
+  border-width: medium;
+  border-color: greenyellow;
+}
+
+#characterFour {
+  background-image: url("Resources/characterFour.png");
+  height: 277px;
+  width: 237px;
+  background-size: cover;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#characterFour:hover {
+  cursor: pointer;
+  border-width: medium;
+  border-color: greenyellow;
+}
+
+#characterFive {
+  background-image: url("Resources/characterFive.png");
+  height: 277px;
+  width: 237px;
+  background-size: cover;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#characterFive:hover {
+  cursor: pointer;
+  border-width: medium;
+  border-color: greenyellow;
+}
+
+#characterSix {
+  background-image: url("Resources/characterSix.png");
+  height: 277px;
+  width: 237px;
+  background-size: cover;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#characterSix:hover {
+  cursor: pointer;
+  border-width: medium;
+  border-color: greenyellow;
+}
+
+#downloadButton {
+  left: 50%;
+  top: 65%;
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  height: 75px;
+  width: 250px;
+  background-color: lightgrey;
+  border-radius: 8px;
+  font-size: larger;
+}
+#downloadButton:hover {
+  background-color: darkgray;
+  cursor: pointer;
+}
+@font-face {
+  font-family: amongus-title;
+  src: url(Resources/AmongUs-Regular.ttf);
+}
