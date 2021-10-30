@@ -26,9 +26,22 @@ async function hideSelect(event)
     character = event.target;
     style = window.getComputedStyle(character, false)
     let bi = style.backgroundImage.slice(4, -1).replace(/"/g, "");
-    bi = bi.slice(55)
-    console.log(bi);
-    $("#profile").append(character.src);
+    bi = bi.slice(-26);
+
+    let profile = document.createElement("img");
+    profile.src = bi;
+    profile.height = 150;
+    profile.width = 120;
+    profile.style.float = "right";
+
+    let profileName = document.createElement("div");
+    profileName.innerText = userName;
+    profileName.style.textAlign = "right";
+    profileName.style.justifyContent = "right";
+    profileName.style.color = "white";
+
+    $("#profile").append(profile);
+    $("#profile").append(profileName);
     $("#characters").hide();
 
     let rolePick = 0 // getRandomInt(2);
