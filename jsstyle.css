@@ -226,6 +226,22 @@ body {
   font-size: 35px;
 }
 
+#voteButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  height: 75px;
+  width: 200px;
+  border-radius: 8px;
+  font-size: larger;
+}
+
+#voteButton:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
 @font-face {
   font-family: amongus-title;
   src: url(Resources/AmongUs-Regular.ttf);

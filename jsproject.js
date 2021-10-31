@@ -67,7 +67,7 @@ async function hideSelect(event)
             break;
         
         case "Resources/characterFour.png":
-            chatColor = "Resources/whiteChat.png";
+            chatColor = "Resources/redChat.png";
             break;
         
         case "Resources/characterFive.png":
@@ -199,7 +199,7 @@ async function chat()
     $("#chat").show();
     let comment = document.createElement("div");
     comment.id = "otherCommentOne";
-    comment.innerText = "Red was kind of sus"
+    comment.innerText = "White was kind of sus"
 
 
     let commentTwo = document.createElement("div");
@@ -225,7 +225,7 @@ async function chat()
     $("#chat").append(chatButton);
 }
 
-function submitChat()
+async function submitChat()
 {
     let comment = document.createElement("div");
     comment.id = "myComment";
@@ -235,6 +235,34 @@ function submitChat()
     $("#chatButton").remove();
     chatSound.play();
     $("#chat").append(comment);
+
+    let commentThree = document.createElement("div");
+    commentThree.id = "otherCommentTwo";
+    commentThree.innerText = "I can vouch for you, let's vote white";
+
+    await sleep(3000);
+    chatSound.play();
+    $("#chat").append(commentThree);
+
+    await sleep(2000);
+    let vote = document.createElement("button");
+    vote.id = "voteButton";
+    vote.innerText = "Vote White";
+    vote.onclick = voteClick;
+    $("#chat").append(vote);
+}
+
+async function voteClick()
+{
+    $("#chat").remove();
+    let eject = document.createElement("img");
+    eject.src = "Resources/amongusejected.gif";
+    eject.alt = "meeting";
+    eject.width = "1500";
+    eject.height = "550";
+    $("#content").append(eject);
+    await sleep(5000);
+    $(eject).remove();
 }
 
 
