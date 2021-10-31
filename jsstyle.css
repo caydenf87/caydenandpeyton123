@@ -149,6 +149,83 @@ body {
   font-size: 50px;
   text-transform: uppercase;
 }
+
+#chat {
+  background-color: rgb(169, 169, 169, 0.5);
+  width: 1300px;
+  height: 700px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+#otherCommentOne {
+  background-image: url("Resources/blackChat.png");
+  margin-top: 30px;
+  margin-left: 15px;
+  text-align: center;
+  padding-top: 30px;
+  height: 75px;
+  width: 1000px;
+  display: block;
+  border-radius: 8px;
+  font-family: chatFont;
+  background-size: cover;
+  font-size: 35px;
+}
+
+#otherCommentTwo {
+  background-image: url("Resources/blackChat.png");
+  margin-top: 30px;
+  margin-left: 15px;
+  text-align: center;
+  padding-top: 30px;
+  height: 75px;
+  width: 1000px;
+  display: block;
+  border-radius: 8px;
+  font-family: chatFont;
+  background-size: cover;
+  font-size: 35px;
+}
+
+#chatBox {
+  display: block;
+  text-align: center;
+  margin-left: 25px;
+  width: 1000px;
+  height: 60px;
+  border-radius: 8px;
+  margin-top: 375px;
+  font-size: 20px;
+}
+
+#chatButton {
+  float: right;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/001/186/944/non_2x/blue-arrow-button-png.png");
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+  margin-top: -60px;
+  margin-right: 175px;
+  border-radius: 8px;
+}
+
+#myComment {
+  margin-top: 30px;
+  margin-left: 275px;
+  text-align: center;
+  padding-top: 30px;
+  height: 75px;
+  width: 1000px;
+  display: block;
+  border-radius: 8px;
+  font-family: chatFont;
+  background-size: cover;
+  font-size: 35px;
+}
+
 @font-face {
   font-family: amongus-title;
   src: url(Resources/AmongUs-Regular.ttf);
@@ -157,4 +234,9 @@ body {
 @font-face {
   font-family: amongus;
   src: url(Resources/amongus.ttf);
+}
+
+@font-face {
+  font-family: chatFont;
+  src: url(Resources/chatFont.ttf);
 }
