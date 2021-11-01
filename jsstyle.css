@@ -214,16 +214,17 @@ body {
 
 #myComment {
   margin-top: 30px;
-  margin-left: 275px;
+  margin-left: 150px;
   text-align: center;
   padding-top: 30px;
-  height: 75px;
+  height: 85px;
   width: 1000px;
   display: block;
   border-radius: 8px;
   font-family: chatFont;
   background-size: cover;
   font-size: 35px;
+  padding-right: 110px;
 }
 
 #voteButton {
@@ -240,6 +241,77 @@ body {
 #voteButton:hover {
   cursor: pointer;
   background-color: red;
+}
+
+#meetingButton {
+  background-image: url("Resources/emergencyButton.jpg");
+  width: 374px;
+  height: 374px;
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+
+#meetingButton:hover {
+  cursor: pointer;
+  border-width: medium;
+  border-color: greenyellow;
+}
+
+#sabotageButton {
+  background-image: url("Resources/sabotage.jpg");
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 200px;
+}
+
+#sabotageButton:hover {
+  cursor: pointer;
+  border-width: medium;
+  border-color: red;
+}
+
+#killButton {
+  background-image: url("Resources/kill.jpg");
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 200px;
+}
+
+#killButton:hover {
+  cursor: pointer;
+  border-width: medium;
+  border-color: red;
+}
+
+.blink {
+  background-color: red;
+  background-image: none;
+}
+
+#bodyReport {
+  margin-top: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#imposterWin {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 @font-face {

@@ -2,11 +2,19 @@ let userName;
 let character;
 let characterList;
 let chatColor;
+let profImg;
 count = 0;
 
 const gameStart = new Audio("Resources/Roundstart.mp3");
 const chatSound = new Audio("Resources/chatSound.mp3");
 const meeting = new Audio("Resources/emergency.mp3");
+const crewWin = new Audio("Resources/victory.mp3");
+const ejectSound = new Audio("Resources/ejectSound.mp3");
+const ejectMusic = new Audio("Resources/ejectMusic.mp3");
+const crisis = new Audio("Resources/crisis.mp3");
+const imposterKill = new Audio("Resources/impostorKill.mp3");
+const bodyReport = new Audio("Resources/bodyFound.mp3");
+const imposterWin = new Audio("Resources/victoryImpostor.mp3");
 
 $("#chat").hide();
 $("#characters").hide();
@@ -30,29 +38,28 @@ async function hideSelect(event)
     character = event.target;
     style = window.getComputedStyle(character, false)
     let bi = style.backgroundImage.slice(4, -1).replace(/"/g, "");
-    let profImage;
     if (bi.slice(-26)[0] == "R")
     {
-        profImage = bi.slice(-26);
+        profImg = bi.slice(-26);
     }
 
     else if (bi.slice(-27)[0] == "R")
     {
-        profImage = bi.slice(-27);
+        profImg = bi.slice(-27);
     }
 
     else if (bi.slice(-28)[0] == "R")
     {
-        profImage = bi.slice(-28);
+        profImg = bi.slice(-28);
     }
 
     else if (bi.slice(-29)[0] == "R")
     {
-        profImage = bi.slice(-29);
+        profImg = bi.slice(-29);
     }
 
 
-    switch (profImage)
+    switch (profImg)
     {
         case "Resources/characterOne.png":
             chatColor = "Resources/cyanChat.png";
@@ -80,7 +87,7 @@ async function hideSelect(event)
     }
 
     let profile = document.createElement("img");
-    profile.src = profImage;
+    profile.src = profImg;
     profile.height = 150;
     profile.width = 120;
     profile.style.float = "right";
@@ -95,7 +102,7 @@ async function hideSelect(event)
     $("#profile").append(profileName);
     $("#characters").hide();
 
-    let rolePick = 0 // getRandomInt(2);
+    let rolePick = getRandomInt(2);
 
     if (rolePick == 0)
     {
@@ -141,9 +148,168 @@ async function imposter()
     gameStart.play();
     await sleep(4000);
     $(imposter).remove();
+    sabotage();
 }
 
-function downloadTask()
+async function sabotage()
+{
+    let sabotageButton = document.createElement("button");
+    sabotageButton.id = "sabotageButton";
+    sabotageButton.onclick = startEmergency;
+    $("#content").append(sabotageButton);
+}
+
+async function startEmergency()
+{
+    $("#sabotageButton").remove();
+    crisis.play();
+    let $bodyBack = $("body");
+    let backgroundInterval = setInterval(function(){
+        $bodyBack.toggleClass("blink");
+     },600)
+     await sleep(11000);
+     clearInterval(backgroundInterval);
+
+     let killButton = document.createElement("button");
+     killButton.id = "killButton";
+     killButton.onclick = kill;
+     $("#content").append(killButton);
+}
+
+async function kill()
+{
+    $("#killButton").remove();
+    imposterKill.play();
+    await sleep(6000);
+    bodyReported();
+}
+
+async function bodyReported()
+{
+    let deadBodyReport = document.createElement("img");
+    deadBodyReport.id = "bodyReport";
+    deadBodyReport.src = "Resources/deadBodyReport.jpg";
+    deadBodyReport.alt = "report";
+    deadBodyReport.width = "900";
+    deadBodyReport.height = "300";
+    deadBodyReport.style.borderRadius = "8px";
+    $("#content").append(deadBodyReport);
+    $(deadBodyReport).hide();
+    bodyReport.play();
+    $(deadBodyReport).slideDown("slow");
+    await sleep(5000);
+    imposterChat();
+}
+
+async function imposterChat()
+{
+    $("#bodyReport").remove();
+    $("#chat").show();
+    let comment = document.createElement("div");
+    comment.id = "otherCommentOne";
+    comment.innerText = "White was by the body"
+
+
+    let commentTwo = document.createElement("div");
+    commentTwo.id = "otherCommentTwo";
+    commentTwo.innerText = "What were you doing " + userName + "?";
+
+    await sleep(2000);
+    chatSound.play();
+    $("#chat").append(comment);
+    await sleep(4000);
+    chatSound.play();
+    $("#chat").append(commentTwo);
+    await sleep(2000);
+
+    let chatBox = document.createElement("input");
+    chatBox.id = "chatBox";
+    chatBox.type = "text";
+    $("#chat").append(chatBox);
+
+    let chatButton = document.createElement("button");
+    chatButton.id = "chatButton";
+    chatButton.onclick = submitImposterChat;
+    $("#chat").append(chatButton);
+}
+
+async function submitImposterChat()
+{
+    let comment = document.createElement("div");
+    comment.id = "myComment";
+    comment.innerText = $("#chatBox").val();
+    comment.style.backgroundImage = "url(" + chatColor + ")";
+    $("#chatBox").remove();
+    $("#chatButton").remove();
+    chatSound.play();
+    $("#chat").append(comment);
+
+    let commentThree = document.createElement("div");
+    commentThree.id = "otherCommentTwo";
+    commentThree.innerText = "White was most sus, vote white";
+
+    await sleep(3000);
+    chatSound.play();
+    $("#chat").append(commentThree);
+
+    await sleep(2000);
+    let vote = document.createElement("button");
+    vote.id = "voteButton";
+    vote.innerText = "Vote White";
+    vote.onclick = imposterVoteClick;
+    $("#chat").append(vote);
+}
+
+async function imposterVoteClick()
+{
+    $("#chat").remove();
+    let eject = document.createElement("img");
+    eject.src = "Resources/amongusejected.gif";
+    eject.alt = "meeting";
+    eject.width = "1500";
+    eject.height = "550";
+    $("#content").append(eject);
+    ejectMusic.play();
+    await sleep(1300);
+    ejectSound.play();
+    await sleep(4500);
+    $(eject).remove();
+    imposterVictory();
+}
+
+async function imposterVictory()
+{
+    let characterChoice = document.createElement("img");
+    characterChoice.src =  profImg;
+    characterChoice.alt = "profile";
+    characterChoice.width = "160";
+    characterChoice.height = "190";
+    characterChoice.style.position = "absolute";
+    characterChoice.style.top = "57%";
+    characterChoice.style.left = "45%";
+
+    $("#content").css("position", "relative");
+    let victory = document.createElement("img");
+    victory.id = "imposterWin";
+    victory.src = "Resources/imposterWin.jpg";
+    victory.alt = "victory";
+    victory.width = "1500";
+    victory.height = "650";
+    imposterWin.play();
+    $("#content").append(victory);
+    $("#content").append(characterChoice);
+    $(victory).hide();
+    $(characterChoice).hide();
+    imposterWin.play();
+    $(victory).fadeIn();
+    $(characterChoice).fadeIn();
+    await sleep(13000);
+    $(victory).remove();
+    $(characterChoice).remove();
+}
+
+
+async function downloadTask()
 {
     let download = document.createElement("img");
     download.src = "Resources/download.png";
@@ -178,17 +344,27 @@ async function showDownload()
     $("#content").append(download);
     await sleep(9000);
     $(download).remove();
-    chat();
+    emergencyMeeting();
 }
 
 
+async function emergencyMeeting()
+{
+    let meetingButton = document.createElement("button");
+    meetingButton.id = "meetingButton";
+    meetingButton.onclick = chat;
+    $("#content").append(meetingButton);
+}
+
 async function chat()
 {
+    $("#meetingButton").remove();
     let emergency = document.createElement("img");
     emergency.src = "Resources/emergencyMeeting.jpg";
     emergency.alt = "meeting";
     emergency.width = "1500";
-    emergency.height = "550";
+    emergency.height = "475";
+    emergency.style.borderRadius = "8px";
     $("#content").append(emergency);
     $(emergency).hide();
     meeting.play();
@@ -261,8 +437,28 @@ async function voteClick()
     eject.width = "1500";
     eject.height = "550";
     $("#content").append(eject);
-    await sleep(5000);
+    ejectMusic.play();
+    await sleep(1300);
+    ejectSound.play();
+    await sleep(4500);
     $(eject).remove();
+    crewVictory();
+}
+
+async function crewVictory()
+{
+    crewWin.play();
+    let victory = document.createElement("img");
+    victory.src = "Resources/victoryCrew.png";
+    victory.alt = "victory";
+    victory.width = "1500";
+    victory.height = "650";
+    $("#content").append(victory);
+    $(victory).hide();
+    crewWin.play();
+    $(victory).fadeIn();
+    await sleep(9000);
+    $(victory).remove();
 }
 
 
