@@ -286,7 +286,7 @@ async function imposterVictory()
     characterChoice.width = "160";
     characterChoice.height = "190";
     characterChoice.style.position = "absolute";
-    characterChoice.style.top = "38%";
+    characterChoice.style.top = "32%";
     characterChoice.style.left = "0%";
     characterChoice.style.right = "0";
     characterChoice.style.bottom = "0";
@@ -302,6 +302,7 @@ async function imposterVictory()
     victory.height = "650";
     victory.style.backgroundPosition = "center";
     imposterWin.play();
+    $("#profile").remove();
     $("#content").append(victory);
     $("#content").append(characterChoice);
     $(victory).hide();
