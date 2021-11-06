@@ -287,7 +287,7 @@ async function imposterVictory()
     characterChoice.height = "190";
     characterChoice.style.position = "absolute";
     characterChoice.style.top = "38%";
-    characterChoice.style.left = "0";
+    characterChoice.style.left = "0%";
     characterChoice.style.right = "0";
     characterChoice.style.bottom = "0";
     characterChoice.style.display = "block";
@@ -309,10 +309,10 @@ async function imposterVictory()
     imposterWin.play();
     $(victory).fadeIn();
     $(characterChoice).fadeIn();
-    await sleep(13000);
-    $(victory).remove();
-    $(characterChoice).remove();
-    $("#startButtonEnd").show();
+    // await sleep(13000);
+    // $(victory).remove();
+    // $(characterChoice).remove();
+    // $("#startButtonEnd").show();
 }
 
 
