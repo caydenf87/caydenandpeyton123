@@ -310,10 +310,10 @@ async function imposterVictory()
     imposterWin.play();
     $(victory).fadeIn();
     $(characterChoice).fadeIn();
-    // await sleep(13000);
-    // $(victory).remove();
-    // $(characterChoice).remove();
-    // $("#startButtonEnd").show();
+    await sleep(13000);
+    $(victory).remove();
+    $(characterChoice).remove();
+    $("#startButtonEnd").show();
 }
 
 
