@@ -4,7 +4,7 @@ body {
   background-size: cover;
 }
 
-#startButton {
+.startButton {
   margin-top: 200px;
   display: block;
   border-radius: 8px;
@@ -19,7 +19,7 @@ body {
   background-color: white;
 }
 
-#startButton:hover {
+.startButton:hover {
   background-color: red;
   color: white;
   cursor: pointer;

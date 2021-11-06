@@ -19,6 +19,7 @@ const imposterWin = new Audio("Resources/victoryImpostor.mp3");
 $("#chat").hide();
 $("#characters").hide();
 $("#downloadButton").hide();
+$("#startButtonEnd").hide();
 characterList = document.getElementsByClassName("character");
 
 for (i = 0; i < characterList.length; i++)
@@ -29,7 +30,7 @@ for (i = 0; i < characterList.length; i++)
 function getUser()
 {
     userName = prompt("Enter a username:");
-    $("#startButton").remove();
+    $("#startButtonOne").remove();
     $("#characters").show();
 }
 
@@ -285,8 +286,12 @@ async function imposterVictory()
     characterChoice.width = "160";
     characterChoice.height = "190";
     characterChoice.style.position = "absolute";
-    characterChoice.style.top = "57%";
-    characterChoice.style.left = "45%";
+    characterChoice.style.top = "38%";
+    characterChoice.style.left = "0";
+    characterChoice.style.right = "0";
+    characterChoice.style.bottom = "0";
+    characterChoice.style.display = "block";
+    characterChoice.style.margin = "auto";
 
     $("#content").css("position", "relative");
     let victory = document.createElement("img");
@@ -295,6 +300,7 @@ async function imposterVictory()
     victory.alt = "victory";
     victory.width = "1500";
     victory.height = "650";
+    victory.style.backgroundPosition = "center";
     imposterWin.play();
     $("#content").append(victory);
     $("#content").append(characterChoice);
@@ -306,6 +312,7 @@ async function imposterVictory()
     await sleep(13000);
     $(victory).remove();
     $(characterChoice).remove();
+    $("#startButtonEnd").show();
 }
 
 
@@ -459,8 +466,12 @@ async function crewVictory()
     $(victory).fadeIn();
     await sleep(9000);
     $(victory).remove();
+    $("#startButtonEnd").show();
 }
 
+async function refreshPage(){
+    window.location.reload();
+} 
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
