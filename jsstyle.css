@@ -310,6 +310,8 @@ body {
 
 #imposterWin {
   position: relative;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @font-face {
