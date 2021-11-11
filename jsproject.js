@@ -38,25 +38,25 @@ async function hideSelect(event)
 {
     character = event.target;
     style = window.getComputedStyle(character, false)
-    let bi = style.backgroundImage.slice(4, -1).replace(/"/g, "");
-    if (bi.slice(-26)[0] == "R")
+    let charColor = style.backgroundImage.slice(4, -1).replace(/"/g, "");
+    if (charColor.slice(-26)[0] == "R")
     {
-        profImg = bi.slice(-26);
+        profImg = charColor.slice(-26);
     }
 
-    else if (bi.slice(-27)[0] == "R")
+    else if (charColor.slice(-27)[0] == "R")
     {
-        profImg = bi.slice(-27);
+        profImg = charColor.slice(-27);
     }
 
-    else if (bi.slice(-28)[0] == "R")
+    else if (charColor.slice(-28)[0] == "R")
     {
-        profImg = bi.slice(-28);
+        profImg = charColor.slice(-28);
     }
 
-    else if (bi.slice(-29)[0] == "R")
+    else if (charColor.slice(-29)[0] == "R")
     {
-        profImg = bi.slice(-29);
+        profImg = charColor.slice(-29);
     }
 
 
@@ -474,6 +474,9 @@ async function refreshPage(){
     window.location.reload();
 } 
 
+/* 
+Function from https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
+*/
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
