@@ -1,0 +1,97 @@
+#catPhoto {
+  height: 200px;
+  width: 400px;
+  background-size: cover;
+}
+
+#memeChoiceOne {
+  background-image: url("Resources/catImageOne.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 240px;
+}
+
+#memeChoiceOne:hover {
+  border-color: chartreuse;
+  border-width: 3px;
+}
+
+#memeChoiceTwo {
+  background-image: url("Resources/catImageTwo.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 240px;
+}
+
+#memeChoiceTwo:hover {
+  border-color: chartreuse;
+  border-width: 3px;
+}
+
+#memeChoiceThree {
+  background-image: url("Resources/catImageThree.jfif");
+  background-size: cover;
+  height: 200px;
+  width: 240px;
+}
+
+#memeChoiceThree:hover {
+  border-color: chartreuse;
+  border-width: 3px;
+}
+
+#memeChoiceFour {
+  background-image: url("Resources/catImageFour.jfif");
+  background-size: cover;
+  height: 200px;
+  width: 240px;
+}
+
+#memeChoiceFour:hover {
+  border-color: chartreuse;
+  border-width: 3px;
+}
+
+#memeChoiceFive {
+  background-image: url("Resources/catImageFive.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 240px;
+}
+
+#memeChoiceFive:hover {
+  border-color: chartreuse;
+  border-width: 3px;
+}
+
+#memeChoiceSix {
+  background-image: url("Resources/catImageSix.jpg");
+  background-size: cover;
+  height: 200px;
+  width: 240px;
+}
+
+#memeChoiceSix:hover {
+  border-color: chartreuse;
+  border-width: 3px;
+}
+
+#createdMeme {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  font-size: 40px;
+  -webkit-text-stroke: 2px black;
+  position: relative;
+  text-align: center;
+}
+
+#topText {
+  position: absolute;
+  left: 35%;
+}
+
+#bottomText {
+  position: absolute;
+  top: 85%;
+  left: 35%;
+}
