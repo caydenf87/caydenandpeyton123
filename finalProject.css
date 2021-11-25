@@ -1,9 +1,3 @@
-#catPhoto {
-  height: 200px;
-  width: 400px;
-  background-size: cover;
-}
-
 #memeChoiceOne {
   background-image: url("Resources/catImageOne.jpg");
   background-size: cover;
@@ -83,15 +77,137 @@
   -webkit-text-stroke: 2px black;
   position: relative;
   text-align: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #topText {
+  left: 0;
   position: absolute;
-  left: 35%;
+  text-align: center;
+  top: 5px;
+  width: 100%;
 }
 
 #bottomText {
   position: absolute;
-  top: 85%;
-  left: 35%;
+  text-align: center;
+  bottom: -5px;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Cat Font";
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 60px;
+  background-color: slategray;
+  line-height: 150px;
+  margin-top: -20px;
+}
+
+@font-face {
+  font-family: "Cat Font";
+  src: url("Resources/Cat\ Font.ttf");
+}
+
+#APIstuff {
+  display: flex;
+  flex-direction: row;
+}
+
+#catFact {
+  flex: 0 1 33%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: grey;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  text-align: center;
+  padding-top: 180px;
+}
+
+#catPic {
+  flex: 0 1 33%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  width: 500px;
+  background-size: contain;
+  background-color: grey;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+}
+
+#catGif {
+  flex: 0 1 33%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  width: 500px;
+  background-size: contain;
+  background-color: grey;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+}
+
+#factButton,
+#randomPic,
+#randomGif {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 0 1 33%;
+}
+
+#buttonsOne {
+  display: flex;
+  flex-direction: row;
+}
+
+#buttonsTwo {
+  display: flex;
+  flex-direction: row;
+}
+
+#EUcats,
+#homeCats {
+  margin-top: 10px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 0 1 45%;
+}
+
+#statistics {
+  display: flex;
+  flex-direction: row;
+}
+
+#EUstats,
+#homeStats {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 0 1 45%;
+  background-color: lightgrey;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+}
+
+#meme {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+#memeEnter {
+  display: inline-block;
+  margin-left: 300px;
+  margin-right: auto;
 }

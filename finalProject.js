@@ -20,7 +20,7 @@ document.getElementById('randomPic').onclick = async function()
   let response = await fetch(url, {method: 'GET'});
   let json = await response.json();
   let factArea = document.getElementById("catPic");
-  factArea.innerHTML = "<img id='catPhoto'src='" + json[0].url + "'alt = cat>";
+  factArea.innerHTML = "<img height = 500px width = 500px id='catPhoto'src='" + json[0].url + "'alt = cat>";
 }
 
 document.getElementById('randomGif').onclick = async function()
@@ -29,13 +29,13 @@ document.getElementById('randomGif').onclick = async function()
   let response = await fetch(url, {method: 'GET'});
   console.log(response);
   let factArea = document.getElementById("catGif");
-  factArea.innerHTML = "<img src='" + response.url + "'alt = cat>";
+  factArea.innerHTML = "<img height = 500px width = 500px src='" + response.url + "'alt = cat>";
 }
 
 document.getElementById('EUcats').onclick = async function()
 {
-  $("#stats").show();
-  var xValues = ["Austria", "Belgium", "Netherlands", "Spain", "Romania", "Poland", "Italy", "UK", "Frace", "Germany"];
+  $("#EUstats").hide();
+  var xValues = ["Austria", "Belgium", "Netherlands", "Spain", "Romania", "Poland", "Italy", "UK", "France", "Germany"];
   var yValues = [2.03, 2.05, 2.6, 3.15, 4.3, 6.4, 7.5, 7.5, 13.5, 14.5];
   var barColors = ["red", "red","red","red","red", "red", "red", "red", "red", "red" ];
 
@@ -55,11 +55,13 @@ document.getElementById('EUcats').onclick = async function()
     },
   }
   });
+
+  $("#EUstats").show();
 }
 
 document.getElementById('homeCats').onclick = async function()
 {
-  $("#stats").hide();
+  $("#homeStats").hide();
   var xValues = ["Shelter/rescue", "Stray", "Friends/Family", "Store", "Breeder"];
   var yValues = [43, 21, 21, 12, 3];
   var barColors = [
@@ -82,14 +84,16 @@ document.getElementById('homeCats').onclick = async function()
     options: {
       title: {
         display: true,
-        text: "Where do cat owners acquire their "
+        text: "Where do cat owners acquire their cats?"
       }
     }
   });
+  $("#homeStats").show();
 }
 
 document.getElementById('meme').onclick = async function()
 {
+  $("#meme").hide();
   $("#memeArea").show();
 }
 
