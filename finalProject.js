@@ -7,12 +7,12 @@ https://cataas.com/#/
 Using External Library:
 Chart.js at https://www.chartjs.org/docs/latest/
 */
-let videoSrc;
+
 let randVideo
 let videoOne = '<iframe id="catVideoChoice" width="560" height="315" src="https://www.youtube.com/embed/XyNlqQId-nk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 let videoTwo = '<iframe id="catVideoChoice" width="560" height="315" src="https://www.youtube.com/embed/tpiyEe_CqB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 let videoThree = '<iframe id="catVideoChoice" width="560" height="315" src="https://www.youtube.com/embed/hY7m5jjJ9mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-
+let videoSrc = videoOne;
 let memeImage = "Resources/catImageOne.jpg";
 let memeTopText;
 let memeBottomText;
