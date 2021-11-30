@@ -1,10 +1,31 @@
+/*
+Using APIs:
+https://alexwohlbruck.github.io/cat-facts/
+https://docs.thecatapi.com/
+https://cataas.com/#/
+
+Using External Library:
+Chart.js at https://www.chartjs.org/docs/latest/
+*/
+let videoSrc;
+let randVideo
+let videoOne = '<iframe id="catVideoChoice" width="560" height="315" src="https://www.youtube.com/embed/XyNlqQId-nk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+let videoTwo = '<iframe id="catVideoChoice" width="560" height="315" src="https://www.youtube.com/embed/tpiyEe_CqB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+let videoThree = '<iframe id="catVideoChoice" width="560" height="315" src="https://www.youtube.com/embed/hY7m5jjJ9mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
 let memeImage = "Resources/catImageOne.jpg";
 let memeTopText;
 let memeBottomText;
 
-$("#memeArea").hide();
-$("#stats").hide();
+$("#images").hide();
+$("#memeEnter").hide();
+$("#anotherMeme").hide();
+$("#catVideoFrame").hide();
 
+/*
+Using the API at https://alexwohlbruck.github.io/cat-facts/ to retrieve a 
+random cat fact.
+*/
 document.getElementById('factButton').onclick = async function()
 {
   let url ='https://cat-fact.herokuapp.com/facts/random';
@@ -14,6 +35,10 @@ document.getElementById('factButton').onclick = async function()
   factArea.innerText = json.text;
 }
 
+
+/*
+Using the API at https://docs.thecatapi.com/ to retrieve a random cat image.
+*/
 document.getElementById('randomPic').onclick = async function()
 {
   let url ='https://api.thecatapi.com/v1/images/search';
@@ -23,6 +48,9 @@ document.getElementById('randomPic').onclick = async function()
   factArea.innerHTML = "<img height = 500px width = 500px id='catPhoto'src='" + json[0].url + "'alt = cat>";
 }
 
+/*
+Using the API at https://cataas.com/#/ to retrieve a random cat gif.
+*/
 document.getElementById('randomGif').onclick = async function()
 {
   let url ='https://cataas.com/cat/gif';
@@ -32,6 +60,10 @@ document.getElementById('randomGif').onclick = async function()
   factArea.innerHTML = "<img height = 500px width = 500px src='" + response.url + "'alt = cat>";
 }
 
+/*
+  Using chart.js to create a bar graph showing Top Ten Countries in the EU 
+  with the most cats
+*/
 document.getElementById('EUcats').onclick = async function()
 {
   $("#EUstats").hide();
@@ -59,6 +91,10 @@ document.getElementById('EUcats').onclick = async function()
   $("#EUstats").show();
 }
 
+/*
+  Using chart.js to create a pie graph showing Where cat owners acquire 
+  their cats.
+*/
 document.getElementById('homeCats').onclick = async function()
 {
   $("#homeStats").hide();
@@ -91,57 +127,137 @@ document.getElementById('homeCats').onclick = async function()
   $("#homeStats").show();
 }
 
+/*
+  Hiding button when deciding to create meme.
+*/
 document.getElementById('meme').onclick = async function()
 {
   $("#meme").hide();
-  $("#memeArea").show();
+  $("#images").show();
 }
 
+/*
+  If first image is clicked, that is used for the meme
+*/
 document.getElementById('memeChoiceOne').onclick = async function()
 {
   memeImage = "Resources/catImageOne.jpg";
-  $("#images").empty();
+  $("#images").hide();
+  $("#imagePick").hide();
+  $("#memeEnter").show();
 }
 
+/*
+  If second image is clicked, that is used for the meme
+*/
 document.getElementById('memeChoiceTwo').onclick = async function()
 {
   memeImage = "Resources/catImageTwo.jpg";
-  $("#images").empty();
+  $("#images").hide();
+  $("#imagePick").hide();
+  $("#memeEnter").show();
 }
 
+/*
+  If third image is clicked, that is used for the meme
+*/
 document.getElementById('memeChoiceThree').onclick = async function()
 {
   memeImage = "Resources/catImageThree.jfif";
-  $("#images").empty();
+  $("#images").hide();
+  $("#imagePick").hide();
+  $("#memeEnter").show();
 }
 
+/*
+  If fourth image is clicked, that is used for the meme
+*/
 document.getElementById('memeChoiceFour').onclick = async function()
 {
   memeImage = "Resources/catImageFour.jfif";
-  $("#images").empty();
+  $("#images").hide();
+  $("#imagePick").hide();
+  $("#memeEnter").show();
 }
 
+/*
+  If fifth image is clicked, that is used for the meme
+*/
 document.getElementById('memeChoiceFive').onclick = async function()
 {
   memeImage = "Resources/catImageFive.jpg";
-  $("#images").empty();
+  $("#images").hide();
+  $("#imagePick").hide();
+  $("#memeEnter").show();
 }
 
+/*
+  If sixth image is clicked, that is used for the meme
+*/
 document.getElementById('memeChoiceSix').onclick = async function()
 {
   memeImage = "Resources/catImageSix.jpg";
-  $("#images").empty();
+  $("#images").hide();
+  $("#imagePick").hide();
+  $("#memeEnter").show();
 }
 
+/*
+  Takes selected image, and gets input from text boxes and creates meme.
+*/
 document.getElementById('createMeme').onclick = async function()
 {
   memeTopText = $("#memeTop").val();
   memeBottomText = $("#memeBottom").val();
+  document.getElementById("memeTop").value = "";
+  document.getElementById("memeBottom").value = "";
   document.getElementById("topText").innerText = memeTopText;
   document.getElementById("bottomText").innerText = memeBottomText;
-  $("#memeArea").empty();
+  $("#memeEnter").hide();
   $("#createdMeme").css("height", "400px");
   $("#createdMeme").css("width", "400px");
   $("#createdMeme").css("background-image", ("url(" + memeImage + ")"));
   $("#createdMeme").css("background-size", "cover");
+  $("#createdMeme").show();
+  $("#anotherMeme").show();
+}
+
+document.getElementById('anotherMeme').onclick = async function()
+{
+  $("#anotherMeme").hide();
+  $("#createdMeme").hide();
+  $("#images").show();
+  $("#imagePick").show();
+}
+
+document.getElementById('catVideo').onclick = async function()
+{
+  randVideo = getRandomInt(4);
+  switch (randVideo)
+  {
+      case 0:
+        videoSrc = videoOne;
+        break;
+      case 1:
+        videoSrc = videoTwo;
+        break;
+      case 2:
+        videoSrc = videoThree;
+  }
+
+  let videoFrame = document.getElementById("catVideoFrame");
+  videoFrame.innerHTML = videoSrc;
+  $("#catVideoFrame").show();
+}
+
+
+/* 
+Function from https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
+*/
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
 }

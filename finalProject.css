@@ -105,7 +105,8 @@ h1 {
   font-size: 60px;
   background-color: slategray;
   line-height: 150px;
-  margin-top: -20px;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
 }
 
 @font-face {
@@ -119,16 +120,18 @@ h1 {
 }
 
 #catFact {
-  flex: 0 1 33%;
+  flex: 0 1 32.5%;
   margin-left: auto;
   margin-right: auto;
   background-color: grey;
   border-radius: 10px;
   -moz-border-radius: 10px 20px 30px 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;
   text-align: center;
-  padding-top: 180px;
+  padding-top: 200px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 #catPic {
@@ -162,6 +165,21 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   flex: 0 1 33%;
+  background-color: blue;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+  height: 50px;
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  margin-bottom: 5px;
+}
+
+#factButton:hover,
+#randomPic:hover,
+#randomGif:hover {
+  background-color: lightskyblue;
+  cursor: pointer;
 }
 
 #buttonsOne {
@@ -181,6 +199,20 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   flex: 0 1 45%;
+  background-color: blue;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+  height: 50px;
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  margin-bottom: 5px;
+}
+
+#EUcats:hover,
+#homeCats:hover {
+  background-color: lightskyblue;
+  cursor: pointer;
 }
 
 #statistics {
@@ -204,10 +236,99 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+  height: 50px;
+  background-color: blue;
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+}
+
+#meme:hover {
+  background-color: lightskyblue;
+  cursor: pointer;
 }
 
 #memeEnter {
   display: inline-block;
   margin-left: 300px;
   margin-right: auto;
+  margin-top: 20px;
+}
+
+#memeTop,
+#memeBottom {
+  height: 50px;
+  width: 300px;
+  background-color: lightskyblue;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: slategray;
+  text-align: center;
+  font-size: large;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+}
+
+#createMeme {
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+  height: 35px;
+  background-color: blue;
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: lightcyan;
+}
+
+#imagePick {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: blue;
+}
+
+#createdMeme {
+  margin-top: 30px;
+}
+
+#anotherMeme {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+  height: 35px;
+  background-color: blue;
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+}
+
+#catVideo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+  height: 35px;
+  background-color: blue;
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+}
+
+#catVideoChoice {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
