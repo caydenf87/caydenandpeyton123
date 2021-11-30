@@ -8,19 +8,29 @@ Using External Library:
 Chart.js at https://www.chartjs.org/docs/latest/
 */
 
-let randVideo
+/*
+  Defining variables.
+*/
 let videoOne = '<iframe id="catVideoChoice" width="560" height="315" src="https://www.youtube.com/embed/XyNlqQId-nk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 let videoTwo = '<iframe id="catVideoChoice" width="560" height="315" src="https://www.youtube.com/embed/tpiyEe_CqB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 let videoThree = '<iframe id="catVideoChoice" width="560" height="315" src="https://www.youtube.com/embed/hY7m5jjJ9mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 let videoSrc = videoOne;
-let memeImage = "Resources/catImageOne.jpg";
+let memeImage;
 let memeTopText;
 let memeBottomText;
 
+/*
+  Hiding content that will later be showed after interaction.
+*/
 $("#images").hide();
 $("#memeEnter").hide();
 $("#anotherMeme").hide();
 $("#catVideoFrame").hide();
+$("#faceBook").hide();
+$("#catImagePost").hide();
+$("#commentOne").hide();
+$("#commentTwo").hide();
+$("#commentThree").hide();
 
 /*
 Using the API at https://alexwohlbruck.github.io/cat-facts/ to retrieve a 
@@ -222,6 +232,9 @@ document.getElementById('createMeme').onclick = async function()
   $("#anotherMeme").show();
 }
 
+/*
+  Clears meme section so another can be made
+*/
 document.getElementById('anotherMeme').onclick = async function()
 {
   $("#anotherMeme").hide();
@@ -230,9 +243,12 @@ document.getElementById('anotherMeme').onclick = async function()
   $("#imagePick").show();
 }
 
+/*
+  Randomly chooses embedded youtube video and displays it.
+*/
 document.getElementById('catVideo').onclick = async function()
 {
-  randVideo = getRandomInt(4);
+  let randVideo = getRandomInt(4);
   switch (randVideo)
   {
       case 0:
@@ -248,6 +264,23 @@ document.getElementById('catVideo').onclick = async function()
   let videoFrame = document.getElementById("catVideoFrame");
   videoFrame.innerHTML = videoSrc;
   $("#catVideoFrame").show();
+}
+
+/*
+  Creates a "facebook-ish" post and shows comments after short time.
+*/
+document.getElementById('catPost').onclick = async function()
+{
+  $("#catPost").hide();
+  $("#faceBook").show();
+  await sleep(3000);
+  $("#catImagePost").show();
+  await sleep(2000);
+  $("#commentOne").show();
+  await sleep(2000);
+  $("#commentTwo").show();
+  await sleep(2000);
+  $("#commentThree").show();
 }
 
 

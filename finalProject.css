@@ -280,6 +280,11 @@ h1 {
   color: white;
 }
 
+#createMeme:hover {
+  background-color: lightskyblue;
+  cursor: pointer;
+}
+
 body {
   background-color: lightcyan;
 }
@@ -312,6 +317,11 @@ body {
   color: white;
 }
 
+#anotherMeme:hover {
+  background-color: lightskyblue;
+  cursor: pointer;
+}
+
 #catVideo {
   display: block;
   margin-left: auto;
@@ -326,9 +336,89 @@ body {
   color: white;
 }
 
+#catVideo:hover {
+  background-color: lightskyblue;
+  cursor: pointer;
+}
+
 #catVideoChoice {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+}
+
+#catPost {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+  height: 35px;
+  background-color: blue;
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+}
+
+#catPost:hover {
+  background-color: lightskyblue;
+  cursor: pointer;
+}
+
+#post {
+  position: relative;
+  margin-top: 20px;
+}
+
+#faceBook {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  background-size: cover;
+}
+
+#catImagePost {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  display: block;
+  margin: auto;
+  border-color: lightgrey;
+  border-width: 20px;
+  border-style: solid;
+}
+
+#comments {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 650px;
+}
+
+#commentOne,
+#commentTwo,
+#commentThree {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgray;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5px;
+  text-align: left;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  -moz-border-radius: 10px 20px 30px 0;
+  height: 50px;
+  width: 300px;
+}
+
+.tag {
+  color: blue;
 }
