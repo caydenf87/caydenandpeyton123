@@ -98,6 +98,7 @@
 }
 
 h1 {
+  margin-top: -10px;
   font-family: "Cat Font";
   text-align: center;
   margin-right: auto;
@@ -107,6 +108,7 @@ h1 {
   line-height: 150px;
   border-radius: 10px;
   -moz-border-radius: 10px 20px 30px 0;
+  color: lightskyblue;
 }
 
 @font-face {
@@ -286,7 +288,8 @@ h1 {
 }
 
 body {
-  background-color: lightcyan;
+  background-image: url("https://media.istockphoto.com/photos/paws-of-a-cat-scottish-straight-top-and-bottom-view-isolated-on-white-picture-id1180219189?k=20&m=1180219189&s=170667a&w=0&h=FnnIHGlpE43MD8OT2M0LxGUHTSYkwNQOepqZerANmJ4=");
+  background-size: contain;
 }
 
 #imagePick {
@@ -379,6 +382,8 @@ body {
   margin-right: auto;
   background-position: center;
   background-size: cover;
+  height: 675px;
+  width: 1000px;
 }
 
 #catImagePost {
@@ -399,7 +404,7 @@ body {
   position: absolute;
   width: 100%;
   left: 0;
-  top: 650px;
+  top: 500px;
 }
 
 #commentOne,
@@ -421,4 +426,43 @@ body {
 
 .tag {
   color: blue;
+}
+
+#mySidenav div {
+  position: fixed;
+  left: -90px;
+  transition: 0.3s;
+  padding: 10px;
+  width: 100px;
+  text-decoration: none;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  height: 50px;
+}
+
+#mySidenav div:hover {
+  left: 0;
+  height: 350px;
+}
+
+#about {
+  top: 15px;
+  text-align: left;
+  background-color: lightgray;
+  height: 35px;
+  text-align: left;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+#about .options {
+  top: 15px;
+  background-color: lightgray;
+  height: 35px;
+  line-height: 10px;
+  font-size: 20px;
+  margin-left: 90px;
+  font-size: 20px;
+  line-height: 10px;
+  color: darkgray;
 }
